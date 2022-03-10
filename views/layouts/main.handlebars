@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech News</title>
+  <link rel="stylesheet" href="/stylesheets/style2.css">
+</head>
+
+<body id="home">
+ 
+    <header>
+     <div class="navbar top">
+      <h1 class="logo">
+        <a href="/"><span class="text-primary">Daily </span>Tech News</a>
+      </h1>
+      <nav>
+        {{#if loggedIn}}
+        <a href="/dashboard">dashboard</a>
+        <a id="logout">logout</a>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+     </nav>
+    </div>
+    </header>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer class="footer">
+     <p>&copy;Daily-Tech-News </p> 
+    </footer>
+
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
